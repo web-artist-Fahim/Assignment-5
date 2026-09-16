@@ -1,0 +1,43 @@
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-area ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-area ul li{
+  margin-right: 15px;
+}
+.menu-area ul li a {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #475569;
+    padding: 10px 15px;
+    display: block;
+    transition: .3s;
+}
+.menu-area ul li:hover > a {
+  color: #DB2777;
+}
+.btn{
+  color: #334155;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-primary {
+    color: white;
+    background-color: #DB2777;
+    padding: 10px 15px;
+    border: 1px solid #334155;
+    border-radius: 25px;
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}

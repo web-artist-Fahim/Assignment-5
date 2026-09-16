@@ -1,13 +1,11 @@
-
+import Header from "./Component/Header.tsx";
 import './App.css'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-      <h1 className="text-5xl font-bold text-red-500">
-        Tailwind is working!
-      </h1>
-    </div>
+     <div className="container">
+      <Header></Header>
+     </div>
   )
 }
 
