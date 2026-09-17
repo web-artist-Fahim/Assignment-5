@@ -6,7 +6,7 @@ import logo from '../assets/logo-text.png'
 const Header = () => {
 
   return (
-    <div className='header-container  pt-8 pb-8  sticky top-0 z-50 bg-white'>
+    <div className='header-container  pt-8 pb-8  sticky top-0 z-50 bg-white  shadow-[0_1px_4px_rgba(0,0,0,0.08)]'>
       <div className="logo-area">
         <img src={logo} />
       </div>
