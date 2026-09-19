@@ -57,7 +57,7 @@ export default function EmptyStack({ prop, setGetData }: EmptyStackProps) {
                   </div>
                 </div>
               </div>)
-            })};
+            })}
             <button className=" w-full p-2.5 px-7.5 border cursor-pointer border-[#ED8C85] text-[14px] font-semibold text-[#D82C20] rounded-[10px] mt-2.5"
               onClick={removeAll}>
               Remove all</button>
