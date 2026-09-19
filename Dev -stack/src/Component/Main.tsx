@@ -2,6 +2,9 @@ import {use,useState} from 'react'
 import Stacks from './Stacks'
 import  type obj from "../Types/mainObj"
 import EmptyStack from "./Empty-stack"
+// react tostify
+import { toast } from 'react-toastify';
+
 interface mainProps {
   resolvedPromise:Promise<obj[]>
 }
@@ -17,10 +20,11 @@ const  handleClick = (stackObj:obj):void =>{
       return object.id === stackObj.id
      });
      if(addedItem){
-       window.alert('already added')
+       toast.error(`${stackObj.name} is already added to stack`)
        return 
      }else{
-        setGetData([...getData,stackObj])
+        setGetData([...getData,stackObj]);
+        toast.success(`${stackObj.name} is added to stack`)
       }
   }
   return (

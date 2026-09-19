@@ -1,7 +1,7 @@
 import type obj from "../Types/mainObj";
 import type { Dispatch, SetStateAction } from "react";
 import { FaXmark } from "react-icons/fa6";
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 export interface EmptyStackProps {
   prop: obj[],
@@ -15,10 +15,11 @@ export default function EmptyStack({ prop, setGetData }: EmptyStackProps) {
   function handleRemove(obj: obj) {
     const removeItem = prop.filter((stackData) => stackData.id !== obj.id);
     setGetData(removeItem);
+    toast.error(`${obj.name} removed from stack`)
   }
   function removeAll() {
     setGetData([]);
-    // toast.error('item stack removed')
+    toast.error('All stack removed')
   }
   return (
     <div className=" p-6 border border-[#9da1a7] rounded-xl">
@@ -31,7 +32,7 @@ export default function EmptyStack({ prop, setGetData }: EmptyStackProps) {
           <>
             {prop.map((stack) => {
               return (<div>
-                <div className="flex justify-between items-center gap-1 p-2.5 my-2.5 border border-[#9da1a7] rounded-xl"> 
+                <div key ={stack.id} className="flex justify-between items-center gap-1 p-2.5 my-2.5 border border-[#9da1a7] rounded-xl"> 
                   <div className="frist p-1 pb-1 flex justify-between items-center gap-2.5">
                     <img className="w-9.5" src={stack.icon} alt={stack.name} />
                     <div>
@@ -47,9 +48,9 @@ export default function EmptyStack({ prop, setGetData }: EmptyStackProps) {
                     > 
                     <FaXmark style = {{
                       color:'#94A3B8',
-                      fontSize:'17px',
-                      padding:'10px',
-                      cursor:'pointer'
+                      fontSize:'25px',
+                      cursor:'pointer',
+                      fontWeight:'400'
 
                     }} />
 
