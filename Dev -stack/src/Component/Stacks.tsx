@@ -22,9 +22,9 @@ export default function Stacks({ data,handleClick }: prop) {
   return (
     <>
     
-       <div className="w-80 rounded-3xl bg-white border border-gray-100 shadow-lg p-7">
+       <div className="w-full rounded-3xl bg-white border border-gray-100 shadow-lg p-5">
           <div className="flex items-start justify-between mb-6">
-            <img className='w-12.5' src={data.icon} />
+            <img className='w-8' src={data.icon} />
             <span className="bg-sky-50 text-sky-500 text-sm font-semibold px-4 py-1.5 rounded-full">
               {data.badge}
             </span>
@@ -56,7 +56,7 @@ export default function Stacks({ data,handleClick }: prop) {
               {data.rating}
             </span>
           </div>
-          <button className="w-full bg-gray-900 hover:bg-gray-800 transition-colors text-white font-semibold text-base py-4 rounded-2xl"
+          <button className="w-full bg-gray-900 hover:bg-gray-800 transition-colors text-white font-semibold text-base py-2 rounded-2xl"
           onClick={()=>handleClick(data)}
           >
             Add to Stack

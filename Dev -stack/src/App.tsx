@@ -2,7 +2,12 @@ import Header from "./Component/Header.tsx";
 import './App.css'
 import Banner from "./Component/Banner.tsx";
 import Main from "./Component/Main";
-import {Suspense} from 'react'
+import {Suspense} from 'react';
+import Footer from "./Component/Footer";
+// React tostify 
+
+
+
 
 const dataPromise = async () => {
   const res = await fetch('/data-in-json.json');
@@ -11,6 +16,7 @@ const dataPromise = async () => {
 }
 const resolvedPromise = dataPromise();
 function App() {
+
   return (
      <div className="container">
       <Header></Header>
@@ -18,6 +24,7 @@ function App() {
       <Suspense fallback={<p>loading....</p>}>
         <Main resolvedPromise = {resolvedPromise}></Main>
       </Suspense>
+      <Footer></Footer>
      </div>
   )
 }
